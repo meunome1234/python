@@ -46,16 +46,44 @@ var_salario= 1518
 var_gastos= 1250
 var_investimento= 100
 
-var_renda_e_patrimonio = var_patrimonio + var_salario
 
 #missão 2 parte 2
-print("patrimonio de", var_patrimonio,"salario de", var_salario,"gastos mensais:", var_gastos, "investimento mensal:", var_investimento)#dados
+var_numero_SM_renda = var_salario / 1518 #calculo numero de salarios minimos
 
-#percentual salario + patrimonio em salario minimo
-var_renda_e_patrimonio
+var_porcentagem_SM_renda = (var_salario / 1518) *100 #calculo % renda em sm
+
+var_porcentagem_SM_patrimonio = (var_patrimonio / 1518) *100 #calculo % patrimonio em sm
+
+var_porcentagem_sm_gastos = (var_gastos / 1518) *100 #calculo % gastos em sm
+
+print( var_nome,", recebe mensalmente R$", var_salario)
+print("os recebimentos equivalem a", var_numero_SM_renda , "salarios mínimos")#informacao extra salario
+print( var_nome,"tem um patrimonio de R$", var_patrimonio)#informacao extra patrimonio
+print( var_nome,"gasta R$", var_gastos, "por mês")#informacao extra gastos
 
 
-print("salario + renda = ", var_renda_e_patrimonio)#informacao extra
+#percentual patrimonio em salario minimo
+print("patrimonio em salario minimo = ", var_porcentagem_SM_patrimonio,"%")#informacao extra patrimonio
+#percentual gastos em salario minimo
+print("gastos em salario minimo = ", var_porcentagem_sm_gastos,"%")#informacao extra gastos
+
+
+#missão 2 parte 3
+
+#rendimento patrimonio mes
+var__patrimonio_com_rendimento = (var_patrimonio * 0.05) + var_patrimonio #rendimento mensal do patrimonio (5%)
+var_patrimonio = var__patrimonio_com_rendimento + var_investimento  #adiciona o investimento mensal ao patrimonio
+var_sobra = var_salario - var_gastos #calculo do que sobra do salario
+
+print(" os gastos equivalem a", var_porcentagem_sm_gastos ,"% de sua renda")#porcentagem gastos
+print( var_nome, "investe mensalmente R$", var_investimento)#investimento mensal
+print(var_nome, "após 1 mês está com o patrimônio de R$",var__patrimonio_com_rendimento)#patrimonio com rendimento
+print(" o saldo de dinheiro livre no mês foi de R$", var_sobra)#sobra após gastos
+
+#missão 2 concluida
+
+#missão 3 parte 1
+
 
 
 
