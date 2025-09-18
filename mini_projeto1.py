@@ -75,15 +75,23 @@ var__patrimonio_com_rendimento = (var_patrimonio * 0.05) + var_patrimonio #rendi
 var_patrimonio = var__patrimonio_com_rendimento + var_investimento  #adiciona o investimento mensal ao patrimonio
 var_sobra = var_salario - var_gastos #calculo do que sobra do salario
 
-print(" os gastos equivalem a", var_porcentagem_sm_gastos ,"% de sua renda")#porcentagem gastos
+print("os gastos equivalem a", var_porcentagem_sm_gastos ,"% de sua renda")#porcentagem gastos
 print( var_nome, "investe mensalmente R$", var_investimento)#investimento mensal
 print(var_nome, "após 1 mês está com o patrimônio de R$",var__patrimonio_com_rendimento)#patrimonio com rendimento
-print(" o saldo de dinheiro livre no mês foi de R$", var_sobra)#sobra após gastos
+print("o saldo de dinheiro livre no mês foi de R$", var_sobra)#sobra após gastos
 
 #missão 2 concluida
 
 #missão 3 parte 1
 
+#rendimento 12 meses sem adição no período
+
+var__patrimonio_12meses = var__patrimonio_com_rendimento * (1 + 0.05)**12 #calculo dinheiro total sem investir
+var_rendimento12meses = var__patrimonio_12meses - var__patrimonio_com_rendimento #calculo do rendimento em 12 meses
+#missão 3 parte 2
+
+
+print( "se", var_nome, " não investir nada, após 12 meses o seu patrimônio terá rendio R$", var_rendimento12meses,"e será R$", var__patrimonio_12meses )
 
 
 
