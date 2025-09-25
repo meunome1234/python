@@ -60,7 +60,7 @@ print(f"--- {ql}")# separação ----
 #paragrafo6 
 #restante do salario
 sobra = int(salario) - gasto_total
-print(f"Pra terminar, calculando o seu saldo mensal, com base em tos os gastos{ql}e no teu salário, o valor resultante é de {G}{sobra}{W}")
+print(f"Pra terminar, calculando o seu saldo mensal, com base em tos os gastos{ql}e no teu salário, o valor resultante é de {G}{float(sobra):.2f}{W}")
 #investimento
 investimento = input(f"Desse valor, considerando que qualquer investimento é válido,{ql}o quanto você conseguiria{Y} investir{W} todo mês: R$ ")
 #sugestão de investimento
@@ -80,11 +80,11 @@ tempo_objetivo_meses = (float(valor_objetivo) - float(patrimonio)) / float(inves
 #calculo do tempo para atingir o objetivo anos
 tempo_objetivo_anos = tempo_objetivo_meses/12
 
-print(f"{tempo_objetivo_meses} meses")
+print(f"{float(tempo_objetivo_meses):.2f} meses")
 print(f"Ou {tempo_objetivo_anos} anos")
 
 #mensagem final
-print(f"Poe hora, é isso que tenho para te ajudar{ql}Espero que tenha sido útil")
+print(f"Por hora, é isso que tenho para te ajudar{ql}Espero que tenha sido útil")
 
 
 
