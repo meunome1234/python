@@ -22,14 +22,14 @@ print(f"oi, pode me chamar de {B}{bot_nome}{W}!{ql}sou seu assistente financeiro
 #paragrafo2 - dados pessoais
 
 print(f"[DADOS PESSOAIS] {ql}") #título dados pessoais
-nome = input(f"Primeiro, me diz teu {Y}nome{W}: ")
+nome1 = input(f"Primeiro, me diz teu {Y}nome{W}: ")
 dia = input(f"Me diz o {Y}dia{W} em que tu nasceu: ")
 mes = input(f"Agora o {Y}mês{W}: ")
 ano = input(f"E o {Y}ano{W}: ")
 
 print(f"{ql} --- {ql}")# separação ----
 
-print(f"Muito bem, então conferindo seus dados, estou registrando aqui.{ql}{G}{nome}{W}, nascimento em{G} {dia}/{mes}/{ano}{W}{ql}")
+print(f"Muito bem, então conferindo seus dados, estou registrando aqui.{ql}{G}{nome1}{W}, nascimento em{G} {dia}/{mes}/{ano}{W}{ql}")
 
 
 print(f"[DADOS FINANCEIROS] {ql}") #título dados financeiros
@@ -48,7 +48,7 @@ outros = input(f"Pra terminar, quanto você gasta com {Y}outros{W} (lazer, roupa
 print(f"--- {ql}")# separação ----
 
 #paragrafo5 - cresumo dos dados
-print(f"Obrigado,{G}{nome}{W}, resumindoas informações financeiras até agora.{ql}Os seus gastos discriminados são:")
+print(f"Obrigado,{G}{nome1}{W}, resumindoas informações financeiras até agora.{ql}Os seus gastos discriminados são:")
 print(f"{G}Aluguel:{W} R$ {float(aluguel):.2f}")
 print(f"{G}Feira{W}: R$ {float(feira):.2f}")
 print(f"{G}Comida fora{W}: R$ {float(comida):.2f}")
@@ -94,8 +94,8 @@ print(f"Por hora, é isso que tenho para te ajudar{ql}Espero que tenha sido úti
 #criação dos objetos do usuario (antonieta) do chatbot a partrir dos input
 data_nascimento = Data(dia, mes, ano)
 financas_usuario = Financas(patrimonio, salario, gasto_total, investimento)
-pessoa_usuario = Pessoa(nome, data_nascimento, financas_usuario)
-
+pessoa_usuario1 = Pessoa(nome1, data_nascimento, financas_usuario)
+print(pessoa_usuario1.nome)
 #--------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------
 # usuário2
@@ -180,16 +180,13 @@ print(f"Por hora, é isso que tenho para te ajudar{ql}Espero que tenha sido úti
 
 #missaão 2 - mini projeto 3 -----------------------------------
 #criação dos objetos do usuario (2) do chatbot a partrir dos input
-#inportar pra pessoa 2-----
-from data import Data2
-from financas import Financas2
-from pessoa import Pessoa2  
+
 #pessoa 2
-data_nascimento2 = Data2(dia2, mes2, ano2)
-financas_usuario2 = Financas2(patrimonio2, salario2, gasto_total2, investimento2)
-pessoa_usuario2 = Pessoa2(nome2, data_nascimento2, financas_usuario2)
+data_nascimento2 = Data(dia2, mes2, ano2)
+financas_usuario2 = Financas(patrimonio2, salario2, gasto_total2, investimento2)
+pessoa_usuario2 = Pessoa(nome2, data_nascimento2, financas_usuario2)
 
 #dados usuario 1
-print(f"dados do usuario 1: {pessoa_usuario.nome}, {pessoa_usuario.nascimento.data_nascimento}, {pessoa_usuario.financas.patrimonio}, {pessoa_usuario.financas.salario}, {pessoa_usuario.financas.gastos}, {pessoa_usuario.financas.investimentos}")
+print(f"dados do usuario 1: {pessoa_usuario1.nome}, {pessoa_usuario1.nascimento.data_nascimento}, {pessoa_usuario1.financas.patrimonio}, {pessoa_usuario1.financas.salario}, {pessoa_usuario1.financas.gastos}, {pessoa_usuario1.financas.investimentos}")
 #dados usuario 2
-print(f"dados do usuario 2: {pessoa_usuario2.nome2}, {pessoa_usuario2.nascimento2.data_nascimento2}, {pessoa_usuario2.financas2.patrimonio2}, {pessoa_usuario2.financas2.salario2}, {pessoa_usuario2.financas2.gastos2}, {pessoa_usuario2.financas2.investimentos2}")  
+print(f"dados do usuario 2: {pessoa_usuario2.nome}, {pessoa_usuario2.nascimento.data_nascimento}, {pessoa_usuario2.financas.patrimonio}, {pessoa_usuario2.financas.salario}, {pessoa_usuario2.financas.gastos}, {pessoa_usuario2.financas.investimentos}")  
