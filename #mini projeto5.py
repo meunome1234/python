@@ -111,3 +111,32 @@ print(f"O lucro total será.....{G}R$ {lucro_total:.2f}{r}")
 
 #-------fim missão 2 ----------------------------
 #------------------------------------------------
+
+#missão 3: análises adicionais
+#------------------------------------------------
+analises_ad = input(f"{ql}Gostaria de ver análises adiccionais? (sim/não)")
+if analises_ad == "sim" or analises_ad == "Sim":
+    print(f"{ql}ANÁLISES POUPAMÇA")
+    print(f"Se você tivesse investido{G}R$ {valor_investimento}")
+    print(f"na poupança, ao final dos {B}{vartempo} meses{r},")
+    print(f"o valor resgatado sria......{G}R${(float(valor_investimento) * (1 + (0.06/12)) ** vartempo):.2f}{r}")
+    print(f"O lucro total seria......{G}R$ {(float(valor_investimento) * (1 + (0.06/12)) ** vartempo - float(valor_investimento)):.2f}{r}")
+ 
+    print(f"{ql}ANÁLISES INFLAÇÃO")
+    print(f"a inflação acumulada foi de............................{P} {(1 + (0.0553/12)) ** vartempo - 1:.2%}{r}")
+    print(f"resultando em uma desvalorização de...................{P}R$ {float(valor_investimento) * ((1 + (0.0553/12)) ** vartempo - 1):.2f}{r}")
+    print(f"por exemplo, se você comprava algo por...........{G}R$ {float(valor_investimento):.2f}{r}")
+    print(f"o mesmo item custaria corrigido pela inflação será...{G}R$ {float(valor_investimento) * (1 + (0.0553/12)) ** vartempo:.2f}{r}")
+    print(f"O resgate proporcionalmente ao valor corrigido fica {G}R$ {resgate / (1 + (0.0553/12)) ** vartempo:.2f}{r}")
+    print(f"Já na poupança o proporcional a essa correção seria {G}R$ {(float(valor_investimento) * (1 + (0.06/12)) ** vartempo) / (1 + (0.0553/12)) ** vartempo:.2f}{r}")
+
+    print(f"{ql}Resumo")
+    print(f"Valor investido:.......{G}R$ {float(valor_investimento):.2f}{r}")
+    print(f"Valor resgatado:.......{G}R$ {resgate:.2f}{r}")
+    print(f"Se fosse na poupança...{G}R$ {(float(valor_investimento) * (1 + (0.06/12)) ** vartempo):.2f}{r}")
+    print(f"Correção pela inflação:{G}R$ {float(valor_investimento) * (1 + (0.0553/12)) ** vartempo:.2f}{r}")
+
+else:
+    print("Espero ter Ajudado!")
+#------------------------------------------------
+#-------fim missão 3 ----------------------------
