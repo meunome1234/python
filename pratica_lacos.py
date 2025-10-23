@@ -258,5 +258,6 @@ elif subgenero == "Thrash Metal":
 else:
     print("Subgênero não disponível")
 
-#10. if: Alterando variáveis de fora para usar depois
+#10. if: Alterando variáveis de fora para usar depois--------------------------------
 #10.Exercício 1: Bônus de Troféus por Vitória
+#
