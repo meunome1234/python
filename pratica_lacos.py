@@ -261,3 +261,33 @@ else:
 #10. if: Alterando variáveis de fora para usar depois--------------------------------
 #10.Exercício 1: Bônus de Troféus por Vitória
 #
+total_trofeus = 1200
+venceu_partida = True
+if venceu_partida == True:
+    bonus_trofeus = 30
+    total_trofeus += bonus_trofeus
+print("Total de troféus agora:", total_trofeus)
+#10.Exercício 2: Desconto na Passagem de Ônibus
+valor_passagem = 4.10   
+hoje_e_domingo = True
+if hoje_e_domingo == True:
+    valor_passagem = 2.50
+print("Valor a pagar:", valor_passagem)
+#10.Exercício 3: Custo do Reparo da Bicicleta
+custo_total_reparo = 50.0
+precisa_trocar_pneu = True
+if precisa_trocar_pneu == True:
+    custo_total_reparo += 45.0
+print("O orçamento final do conserto é R$:", custo_total_reparo )
+
+#11. if-elif: Atribuindo valores a variáveis externas-------------------------------
+#Exercício 1: Recompensa por Arena
+recompensa_do_dia = ""
+arena_atual = input("Digite o nome da sua arena: ")
+if arena_atual == "Arena Lendária":
+    recompensa_do_dia = "Baú lendário"
+elif arena_atual == "Pico Congelado":
+    recompensa_do_dia = "Baú Mágico"
+print(f"Parabéns! A recompensa é {recompensa_do_dia}")
+
+#11.Exercício 2: Sugestão de Lanche no Terminal
