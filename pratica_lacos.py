@@ -233,7 +233,7 @@ elif modo_de_jogo == "Casual":
         print("modo de jogo inválido")
 #9.Exercício 2: Planejador de Viagem de Ônibus
 destino = input("Digite seu destino (Zona Sul ou Zona Norte): ")
-transito_intenso = input("Há trânsito intenso no caminho? (True/False): ")
+transito_intenso = (input("Há trânsito intenso no caminho? (True/False): "))
 
 if destino == "Zona Sul":
     print("Calculando rota para Zona Sul") 
@@ -247,8 +247,8 @@ else:
     print("Por favor, selecione uma região válida( Zona Sul ou Zona Norte)")
 
 #9.Exercício 3: Personalizador de Playlist de Metal
-subgenero = input("Escolha um subgênero de Metal (Heavy Metal, Thrash Metal): ")
-decada = input("Escolha uma década (70, 80): ") 
+subgenero = (input("Escolha um subgênero de Metal (Heavy Metal, Thrash Metal): "))
+decada = (input("Escolha uma década (70, 80): "))
 if subgenero == "Heavy Metal":
     print("montando playlist de Heavy Metal...")
     if decada == "70":
@@ -285,7 +285,7 @@ print("O orçamento final do conserto é R$:", custo_total_reparo )
 #11. if-elif: Atribuindo valores a variáveis externas-------------------------------
 #Exercício 1: Recompensa por Arena
 recompensa_do_dia = ""
-arena_atual = input("Digite o nome da sua arena: ")
+arena_atual = (input("Digite o nome da sua arena: "))
 if arena_atual == "Arena Lendária":
     recompensa_do_dia = "Baú lendário"
 elif arena_atual == "Pico Congelado":
@@ -294,7 +294,7 @@ print(f"Parabéns! A recompensa é {recompensa_do_dia}")
 
 #11.Exercício 2: Sugestão de Lanche no Terminal
 lanche_escolhido = ""
-nível_de_fome = input("Digite seu nível de fome: (muita ou pouca): ")
+nível_de_fome = (input("Digite seu nível de fome: (muita ou pouca): "))
 if nível_de_fome == "muita":
     lanche_escolhido = "cachorro-quente duplo"
 elif nível_de_fome == "pouca":
@@ -303,15 +303,17 @@ print(f"OK, seu pedido é: {lanche_escolhido}")
 
 #11.Exercício 3: Gênero Musical e Instrumento Destaque
 instrumento_destaque = ""
-genero_musical = input("Digite o gênero musical (Metal, Forró): ")
+genero_musical = (input("Digite o gênero musical (Metal, Forró): "))
 if genero_musical == "Metal":
     instrumento_destaque = "guitarra com distorção"
 elif genero_musical == "Forró":
     instrumento_destaque = "sanfona"
 print(f"No gênero {genero_musical}, o instrumento destaque é: {instrumento_destaque}")
+#__________________________________________________________________________________
 #__________________________________________________________________________________     
 #módulo 2: laços de repetição
 #__________________________________________________________________________________
+#___________________________________________________________________________________
 #1. Laços while infinitos-----------------------------------------------------------
 #1.Exercício 1: O P.E.K.K.A. incansável
 
@@ -336,10 +338,120 @@ while True:
 batalha_continua = True
 while batalha_continua == True:
     print("tropas Lutando...")
-status_batalha = input("A batalha acabou? (sim/não): ")
+status_batalha = (input("A batalha acabou? (sim/não): "))
 if status_batalha == "sim":
     batalha_continua = False
 
 #Exercício 2: Cadastrando itens na bicicletaria
+continuar_cadastrando: True
+peça =''
 
+while continuar_cadastrando == True:
+    peça = (input("Digite o nome da peça: "))
+    print(f"Peça {peça} cadastrada")
+    continuar = input("deseja cadastrar outras peças?(s/n) ")
+    if continuar == "s" or "S":
+        continuar_cadastrando = True
+    elif continuar == "n" or "N":
+        continuar_cadastrando = False
+    break
+#2.Exercício 3: Montando a Setlist do show
+adicionar_musica = True
+while adicionar_musica == True:
+    nome_da_musica = input (f"Qual o nome da música? ")
+    print(f"{nome_da_musica} adicionada à setlist")
+    nova_musica = input (" adicionar nova musica? (s/n)")
+    if nova_musica == "S" or "s":
+        adicionar_musica = True
+    elif nova_musica == "n" or "N":
+        adicionar_musica = False
+    break
+#3. Laços while com expressão de comparação----------------------------------------
+#Exercício 1: Contagem regressiva para a batalha
+contador = 5
+while contador > 0:
+    print(f"{contador} s")
+    contador -= 1
+print(" BATALHA!")
+
+#Exercício 2: Enchendo o pneu da bicicleta
+pressao_pneu = 10
+while pressao_pneu < 30:
+    print(f" enchendo.. pressão atual{pressao_pneu}")
+    pressao_pneu += 2
+print(" pneu calibrado!")
+
+#Exercício 3: Economizando para o ingresso do show
+dinheiro_guardado = 20
+while dinheiro_guardado < 100:
+    print(f"dinheiro atual: R$ {dinheiro_guardado}. Ainda não é suficiente")
+    dinheiro_guardado += 10
+print("Hora de comprar o ingresso!")
+
+#4. Laços while com expressão lógica------------------------------------------------
+#Exercício 1: Destruindo a torre inimiga
+vida_torre = 1000
+tempo_restante = 60
+while vida_torre > 0 and tempo_restante > 0:
+    vida_torre -= 150
+    tempo_restante -= 1
+    print(f"tempo restante: {tempo_restante} vida da torre: {vida_torre}")
+if vida_torre <= 0:
+    print("vitória!")
+else:
+    print(" derrota!")
+
+#Exercício 2: Viagem de ônibus com paradas
+parada_atual = 0
+saldo_vem = 15.0
+while parada_atual < 10 and saldo_vem >= 1.5:
+    parada_atual += 1 
+    saldo_vem -= 1.5
+    print(f"passando pela parada: {parada_atual} saldo: {saldo_vem}")
+print("chegou")
+
+
+
+#Exercício 3: Aprendendo uma música na guitarra
+nivel_habilidade = 10
+paciencia = 100
+while nivel_habilidade < 50 and paciencia > 0:
+    print(f"status treino paciencia: {paciencia} habilidade:{nivel_habilidade}")
+    nivel_habilidade += 5
+    paciencia -= 10
+
+
+#5. Laços while com if dentro--------------------------------------------------------
+#5.Exercício 1: Procurando o Barril de Goblins
+carta_encontrada = False
+while not carta_encontrada:
+    carta = (input ("dige o nome de uma carta"))
+    if carta == "Barril de Goblins":
+        print("carta encontrada!")
+        carta_encontrada = True
+    else:
+        print("não é essa")
+
+#5.Exercício 2: Espera seletiva do ônibus
+onibus_correto_chegou = False
+while onibus_correto_chegou == False:
+    onibus = (input(" qual onibus passou? "))
+    if onibus == "CDU/Várzea":
+        onibus_correto_chegou = True
+        print("Finalmente! Embarcando...")
+    else:
+        print("esse não é o meu. Continuo Esperando.")
+
+#5.Exercício 3: Caça ao Tesouro do Vinil
+prateleira_atual = 1
+while prateleira_atual <= 5:
+    print("verificando preteleira")
+    disco = (input(" o disco 'sabbath bloody sabbath' está aqui? (sim/não)"))
+    if disco == "s" or "S":
+        print("Achei! Dia de sorte!")
+        break
+    else:
+        prateleira_atual += 1
+#6. Laços while aninhados (um while dentro de outro)--------------------------------------
+#Exercício 1: Simulador de dias e horas de jogo
 
