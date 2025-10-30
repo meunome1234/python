@@ -1,4 +1,4 @@
-#mini projeto5
+#mini projeto4.py
 #loop
 loop = True
 while loop == True:# laço para nova simulação   

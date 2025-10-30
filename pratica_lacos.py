@@ -1,4 +1,6 @@
+#__________________________________________________________________________________
 #módulo 1: condicionais
+#__________________________________________________________________________________
 #1. if com condição de variável única e bloco de 1 linha-----------------
 
 #1.Exercício 1: O Mago Elétrico está na área?
@@ -291,3 +293,53 @@ elif arena_atual == "Pico Congelado":
 print(f"Parabéns! A recompensa é {recompensa_do_dia}")
 
 #11.Exercício 2: Sugestão de Lanche no Terminal
+lanche_escolhido = ""
+nível_de_fome = input("Digite seu nível de fome: (muita ou pouca): ")
+if nível_de_fome == "muita":
+    lanche_escolhido = "cachorro-quente duplo"
+elif nível_de_fome == "pouca":
+    lanche_escolhido = "pastel de queijo"
+print(f"OK, seu pedido é: {lanche_escolhido}")
+
+#11.Exercício 3: Gênero Musical e Instrumento Destaque
+instrumento_destaque = ""
+genero_musical = input("Digite o gênero musical (Metal, Forró): ")
+if genero_musical == "Metal":
+    instrumento_destaque = "guitarra com distorção"
+elif genero_musical == "Forró":
+    instrumento_destaque = "sanfona"
+print(f"No gênero {genero_musical}, o instrumento destaque é: {instrumento_destaque}")
+#__________________________________________________________________________________     
+#módulo 2: laços de repetição
+#__________________________________________________________________________________
+#1. Laços while infinitos-----------------------------------------------------------
+#1.Exercício 1: O P.E.K.K.A. incansável
+
+while True:
+    print("andando")
+    #ctrl + c para parar o código
+#1.Exercício 2: Esperando o ônibus da madrugada
+    break
+
+    
+while True:
+    print("ainda esperando o ônibus")       
+    #ctrl + c para parar o código
+#1.Exercício 3: riff eterno
+    break
+while True:
+    print("peuum... peum... peueummm...")
+    #ctrl + c para parar o código
+    break
+#2. Laços while com uma variável como condicional----------------------------------
+#Exercício 1: Batalha em andamento
+batalha_continua = True
+while batalha_continua == True:
+    print("tropas Lutando...")
+status_batalha = input("A batalha acabou? (sim/não): ")
+if status_batalha == "sim":
+    batalha_continua = False
+
+#Exercício 2: Cadastrando itens na bicicletaria
+
+
