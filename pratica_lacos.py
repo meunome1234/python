@@ -453,5 +453,55 @@ while prateleira_atual <= 5:
     else:
         prateleira_atual += 1
 #6. Laços while aninhados (um while dentro de outro)--------------------------------------
-#Exercício 1: Simulador de dias e horas de jogo
+#Exercício 1: Simulador de dias e horas de jogo V1
+dia = 1
+turno = 1
+while dia <= 3:
+    if dia == 1:
+        print("dia 1")
+        dia += 1
+    elif dia == 2:
+        print("dia 2")
+        dia += 1
+    elif dia == 3:
+        print("dia 3")
+        dia = 1
+
+    while turno <= 4:
+        if turno == 1:
+            print("turno manhã")
+            turno += 1
+        elif turno == 2:
+            print("turno tarde")
+            turno += 1
+        elif turno == 3:
+            print("turno noite")
+            turno += 1
+        else:
+            print ("turno madrugada")
+            turno = 1
+
+#Exercício 1: Simulador de dias e horas de jogo V2
+dia = 1 
+turno = 1
+print_t = None
+
+if turno == 1:
+    print_t = "manhã"
+elif turno == 2:
+    print_t = "tarde"
+elif turno == 3:
+    print_t = "noite"
+elif turno == 4:
+    print_t = "madrugada"
+    turno = 1
+
+
+while True:
+
+    dia += 1
+    while True:
+        print(f"dia: {dia} turno:{print_t}")
+
+#
 
