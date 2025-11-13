@@ -12,23 +12,23 @@ r = '\033[0m' # reset
 #-------------------------------------------
 
 pessoas = []
-laco_invalido = True
 
-print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- [{P}d{r}]igitar dados de uma nova pessoa{ql}- [{P}m{r}]ostrar dados de nova pessoa{ql}-[{P}S{r}]air{ql}")
+sair = False
 
-opcao = input("opção: ")
+while not sair:
+    print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- "
+          f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- [{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
 
-if opcao == "d" or "D":
-    laco_invalido = False
+    opcao = input("opção: ")
 
-elif opcao == "m" or "M":
-    laco_invalido = False
+    if opcao == "d" or "D":
+        print()
 
-elif opcao == "s" or "S":
-    laco_invalido = False
+    elif opcao == "m" or "M":
+        print()
 
-else:
-    laco_invalido = True
+    elif opcao == "s" or "S":
+        sair = True
 
-
-
+    else:
+        print("digite algo válido")
