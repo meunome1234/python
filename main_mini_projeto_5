@@ -11,24 +11,28 @@ i = '\033[3m' # italico
 r = '\033[0m' # reset
 #-------------------------------------------
 
-pessoas = []
+pessoas = [] #cria lista vazia para armazenar pessoas
 
-sair = False
+sair = False #variável de controle do while do menu
 
-while not sair:
+#menu de opções------------------------------------------------------------------------
+while sair == False:
     print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- "
-          f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- [{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
+          f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- "
+          f"[{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
 
     opcao = input("opção: ")
 
-    if opcao == "d" or "D":
+    if opcao == "d":
         print()
 
-    elif opcao == "m" or "M":
+    elif opcao == "m":
         print()
 
-    elif opcao == "s" or "S":
+    elif opcao == "s":
         sair = True
 
     else:
-        print("digite algo válido")
+        print("Entrada inválida")
+        
+#-------------------------------------------------------------------------------------

@@ -1,5 +1,26 @@
-def inserir_pessoa():
-    nome = input("Digite seu nome")
-    salario = float(input("digite o seu salário"))
-    patrimonio = float(input("Digite seu patrimonio"))
-    return nome, salario, patrimonio
+
+i = '\033[3m' # italico
+#definição  das funções
+from pessoa_mini_projeto_5 import Pessoa
+
+
+def inserir_pessoa(pessoas, nome, salario, patrimonio, conta_corrente):#insere nova pessoa na lista pessoas
+    nova_pessoa = Pessoa(nome, salario, patrimonio, 0)#cria nova pessoa e conta corrente inicia em 0
+    pessoas.append(nova_pessoa)#adiciona nova pessoa à lista pessoas
+
+
+#funções do menu------------------------------------------
+#opção i
+def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida automaticamente no no main ou devvo definir o tipo?
+    nome = input("Digite o nome da pessoa: ")
+    salario = float(input("Digite o seu salário;  "))
+    patrimonio = float(input("Digite o seu patrimônio "))
+    inserir_pessoa(pessoas, nome, salario, patrimonio, 0) #coleta os dados e passa para a função inserir_pessoa(adicionando pessoa na lista)
+    print(f"{i}Pessoa inserida com sucesso!")
+
+#opção m
+def mostrar_dados(pessoas): #como mostrar os dados de todas as pessoas cadastradas?
+
+
+#opção s
+ #OBS: já funciona saindo do while no main
