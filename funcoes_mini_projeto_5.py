@@ -19,8 +19,6 @@ def Digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida 
     print(f"{i}Pessoa inserida com sucesso!")
 
 #opção m
-def Mostrar_dados(pessoas): #como mostrar os dados de todas as pessoas cadastradas?
+#usar for para mostrar 
 
-
-#opção s
-#OBS: já funciona saindo do while no main
+#opção s OBS: opção s já funciona saindo do while do main
