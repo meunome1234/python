@@ -8,12 +8,11 @@ r = '\033[0m' # reset
 #-------------------------------------------
 #importar funções
 from funcoes_mini_projeto_5 import digitar_dados_pessoa
-
+from funcoes_mini_projeto_5 import mostrar_dados_pessoas
 
 
 #programa principal
 def main():
-
 
     pessoas = [] #cria lista vazia para armazenar pessoas
 
@@ -26,19 +25,28 @@ def main():
             f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- "
             f"[{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
 
-        opcao = input("opção: ")
+        opcao = input(f"opção: {P}")
+        print(r) #reseta a cor após a entrada da opção
 
         if opcao == "d":
             print(f"[INSERIR NOVA PESSOA]{ql}")
-            Digitar_dados_pessoa(pessoas)
+            digitar_dados_pessoa(pessoas)
+            input(f"{ql}pressione enter...")#freiar o while
+            
 
         elif opcao == "m":
-            print()
+            print(f"[DADOS DAS PESSOAS]")
+            mostrar_dados_pessoas(pessoas)
+            input(f"{ql}pressione enter...")#freiar o while
 
         elif opcao == "s":
             sair = True
+            print(f"")
 
         else:
             print(f"{ql}Entrada inválida{ql}")
             
     #-------------------------------------------------------------------------------------
+#chama a função main
+if __name__ == "__main__":
+    main()
