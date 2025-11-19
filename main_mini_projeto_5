@@ -1,41 +1,44 @@
 
 #--formatação de texto--------
 G = '\033[32m' # green - verde
-B = '\033[34m' # blue - azul
-Y = '\033[33m' # yellow - amarelo
-C = '\033[36m' # cyan - ciano
-W = '\033[37m' # white - branco
-P =  '\033[1;35m' # purple - roxo 
+P = '\033[1;35m' # purple - roxo 
 ql = "\n" #quebra de linha
 i = '\033[3m' # italico
 r = '\033[0m' # reset
 #-------------------------------------------
 #importar funções
-from funcoes_mini_projeto_5 import Digitar_dados_pessoa
+from funcoes_mini_projeto_5 import digitar_dados_pessoa
 
-pessoas = [] #cria lista vazia para armazenar pessoas
 
-sair = False #variável de controle do while do menu
 
-#menu de opções------------------------------------------------------------------------
-while sair == False:
-    print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- "
-          f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- "
-          f"[{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
+#programa principal
+def main():
 
-    opcao = input("opção: ")
 
-    if opcao == "d":
-        print(f"[INSERIR NOVA PESSOA]{ql}")
-        Digitar_dados_pessoa()
+    pessoas = [] #cria lista vazia para armazenar pessoas
 
-    elif opcao == "m":
-        print()
+    sair = False #variável de controle do while do menu
 
-    elif opcao == "s":
-        sair = True
 
-    else:
-        print(f"{ql}Entrada inválida{ql}")
-        
-#-------------------------------------------------------------------------------------
+    #menu de opções------------------------------------------------------------------------
+    while sair == False:
+        print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- "
+            f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- "
+            f"[{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
+
+        opcao = input("opção: ")
+
+        if opcao == "d":
+            print(f"[INSERIR NOVA PESSOA]{ql}")
+            Digitar_dados_pessoa(pessoas)
+
+        elif opcao == "m":
+            print()
+
+        elif opcao == "s":
+            sair = True
+
+        else:
+            print(f"{ql}Entrada inválida{ql}")
+            
+    #-------------------------------------------------------------------------------------
