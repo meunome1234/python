@@ -9,7 +9,6 @@ r = '\033[0m' # reset
 #importar funções
 from funcoes_mini_projeto_5 import digitar_dados_pessoa
 from funcoes_mini_projeto_5 import mostrar_dados_pessoas
-
 from indices_mini_projeto_5 import taxa_mensal_rendimento
 from indices_mini_projeto_5 import gastos
 from funcoes_mini_projeto_5 import simular_mes_populacao
@@ -81,3 +80,6 @@ def main():
 #chama a função main
 if __name__ == "__main__":
     main()
+
+#--------------------------------------------
+
