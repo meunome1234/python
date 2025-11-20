@@ -48,4 +48,17 @@ def simular_recebimentos(pessoa, taxa_mensal_rendimento): #puxa objeto pessoa e 
 def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
     for setor, (gasto_minimo, gasto_ideal) in gastos.items(): #itera sobre os itens do dicionário gastos
         gasto_ideal = gasto_ideal * pessoa.salario #calcula o gasto ideal em valor monetário
-        gato =
+        gasto = max( gasto_minimo, gasto_ideal) #determina o gasto real como o máximo entre o mínimo e o ideal
+
+        if pessoa.conta_corrente >= gasto: #verifica se há saldo suficiente na conta corrente
+            pessoa.conta_corrente -= gasto #deduz o gasto da conta corrente
+        else:
+            print(f"{r}{i}Atenção! {pessoa.nome} não tem saldo suficiente{setor}.{r}{ql}") #avisa sobre saldo insuficiente    
+    pessoa.patrimonio += pessoa.conta_corrente #atualiza o patrimônio somando o saldo da conta corrente
+    pessoa.conta_corrente = 0 #zera a conta corrente após transferir o saldo para o patrimônio
+
+#função simular_mês_população
+def simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos):
+    for pessoa in pessoas: #itera sobre cada pessoa na lista pessoas
+        simular_recebimentos(pessoa, taxa_mensal_rendimento) #chama a função para simular recebimentos
+        simular_gastos(pessoa, gastos) #chama a função para simular gastos

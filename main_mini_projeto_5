@@ -24,7 +24,9 @@ def main():
     while sair == False:
         print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- "
             f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- "
-            f"[{P}m{r}]ostrar dados de nova pessoa{ql}- [{P}s{r}]air{ql}")
+            f"[{P}m{r}]ostrar dados de nova pessoa{ql}- "
+            f"S[{P}i{r}]mular finanças mensais da população{ql}"
+            f"[{P}s{r}]air{ql}")
 
         opcao = input(f"opção: {P}")
         print(r) #reseta a cor após a entrada da opção
