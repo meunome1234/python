@@ -16,8 +16,8 @@ def inserir_pessoa(pessoas, nome, salario, patrimonio, conta_corrente):#insere n
 #opção i
 def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida automaticamente no no main ou devvo definir o tipo?
     nome = input("Digite o nome da pessoa: ")
-    salario = float(input(f"{r}Digite o seu salário:{G} "))
-    patrimonio = float(input(f"{r}Digite o seu patrimônio:{G} "))
+    salario = float(input(f"{r}Digite o seu salário:{G} R$ "))
+    patrimonio = float(input(f"{r}Digite o seu patrimônio:{G} R$ "))
     inserir_pessoa(pessoas, nome, salario, patrimonio, 0) #coleta os dados e passa para a função inserir_pessoa(adicionando pessoa na lista)
     #cria tupla com os dados da pessoa
 
@@ -28,8 +28,9 @@ def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida 
 #usar for para mostrar 
 def mostrar_dados_pessoas(pessoas):
     for pessoa in pessoas:
-        print(f"Nome: {pessoa.nome}Salário:{G} {pessoa.salario}Patrimônio:{G}"
-            f" {pessoa.patrimonio}Conta Corrente: {G}{pessoa.conta_corrente}{ql}{r}")    
+        print(f"Nome: {pessoa.nome:<20} {r}Salário:{i}{G} "
+              f"R$ {pessoa.salario:.2f} {r}Patrimônio: R$ {i}{G}"
+              f" {pessoa.patrimonio:<10.2f} {r}")    
 
 
 #opção s OBS: opção s já funciona saindo do while do main
