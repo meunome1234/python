@@ -5,6 +5,8 @@ G = '\033[32m' # green - verde
 ql = "\n" #quebra de linha
 #definição  das funções
 from pessoa_mini_projeto_5 import Pessoa
+from indices_mini_projeto_5 import taxa_mensal_rendimento
+from indices_mini_projeto_5 import gastos   
 
 
 def inserir_pessoa(pessoas, nome, salario, patrimonio, conta_corrente):#insere nova pessoa na lista pessoas (main)
@@ -34,3 +36,16 @@ def mostrar_dados_pessoas(pessoas):
 
 
 #opção s OBS: opção s já funciona saindo do while do main
+
+#sumular recebimentos para atualizar os valores do patrimônio
+def simular_recebimentos(pessoa, taxa_mensal_rendimento): #puxa objeto pessoa e a taxa mensal de rendimento
+    rendimento = pessoa.patrimonio * taxa_mensal_rendimento #calcula o rendimento usando a taxa mensall
+    pessoa.conta_corrente += rendimento + pessoa.salario #atualiza o valor da conta corrente somando o rendimento e o salário
+
+
+#função simular gastos
+
+def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
+    for setor, (gasto_minimo, gasto_ideal) in gastos.items(): #itera sobre os itens do dicionário gastos
+        gasto_ideal = gasto_ideal * pessoa.salario #calcula o gasto ideal em valor monetário
+        gato =
