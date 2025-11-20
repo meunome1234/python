@@ -46,19 +46,44 @@ def simular_recebimentos(pessoa, taxa_mensal_rendimento): #puxa objeto pessoa e 
 #função simular gastos
 
 def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
+    lista_aviso = [] #cria lista vazia para armazenar avisos
+    lista_pagamentos = [] #cria lista vazia para armazenar os gastos realizados
+
     for setor, (gasto_minimo, gasto_ideal) in gastos.items(): #itera sobre os itens do dicionário gastos
         gasto_ideal = gasto_ideal * pessoa.salario #calcula o gasto ideal em valor monetário
         gasto = max( gasto_minimo, gasto_ideal) #determina o gasto real como o máximo entre o mínimo e o ideal
 
         if pessoa.conta_corrente >= gasto: #verifica se há saldo suficiente na conta corrente
             pessoa.conta_corrente -= gasto #deduz o gasto da conta corrente
+            lista_pagamentos.append( #adiciona o gasto à lista de pagamentos realizados
+                f"{r}{i}{pessoa.nome} pagou R$ {gasto:.2f} em {setor}.{r}{ql}") 
+
         else:
-            print(f"{r}{i}Atenção! {pessoa.nome} não tem saldo suficiente{setor}.{r}{ql}") #avisa sobre saldo insuficiente    
+            lista_aviso.append( #adiciona o setor à lista de avisos se não houver saldo suficiente
+                f"{r}{i}Atenção! {pessoa.nome} não tem saldo suficiente!{setor}.{r}{ql}") #avisa sobre saldo insuficiente    
     pessoa.patrimonio += pessoa.conta_corrente #atualiza o patrimônio somando o saldo da conta corrente
     pessoa.conta_corrente = 0 #zera a conta corrente após transferir o saldo para o patrimônio
 
+    return lista_aviso, lista_pagamentos #retorna a lista de avisos e de pagamentos
+
+
 #função simular_mês_população
 def simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos):
+    avisos_simulacao = [] #cria lista vazia para armazenar avisos de todas as pessoas
+    pagamentos_simulacao = [] #cria lista vazia para armazenar pagamentos de todas as pessoas   
+    
     for pessoa in pessoas: #itera sobre cada pessoa na lista pessoas
         simular_recebimentos(pessoa, taxa_mensal_rendimento) #chama a função para simular recebimentos
-        simular_gastos(pessoa, gastos) #chama a função para simular gastos
+        
+        avisos = simular_gastos(pessoa, gastos) #chama a função para simular gastos e captura os avisos
+        
+        avisos_simulacao.extend(avisos)  #adiciona os avisos da pessoa à lista geral de avisos
+
+        pagamentos_simulacao.extend(pagamentos)  #adiciona os pagamentos da pessoa à lista geral de pagamentos  
+
+        #se tiver avisos, imprime cada aviso
+        if avisos:
+            for aviso in avisos:
+                print(aviso)
+        
+    return avisos_simulacao, pagamentos_simulacao #retorna a lista de avisos de todas as pessoas e a simulação de pagamentos
