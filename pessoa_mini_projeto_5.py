@@ -6,4 +6,4 @@ class Pessoa:
         self.salario = salario
         self.patrimonio = patrimonio
         self.conta_corrente = conta_corrente
-#------------------------------------------
+#--------------------------------------------

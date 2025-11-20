@@ -54,7 +54,7 @@ def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
         gasto = max( gasto_minimo, gasto_ideal) #determina o gasto real como o máximo entre o mínimo e o ideal
 
         if pessoa.conta_corrente >= gasto: #verifica se há saldo suficiente na conta corrente
-            pessoa.conta_corrente -= gasto #deduz o gasto da conta corrente
+            pessoa.conta_corrente -= gasto #subtrai o gasto da conta corrente
             lista_pagamentos.append( #adiciona o gasto à lista de pagamentos realizados
                 f"{r}{i}{pessoa.nome} pagou R$ {gasto:.2f} em {setor}.{r}") 
 
@@ -69,8 +69,8 @@ def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
 #----------------------------------------------------------------------------------------
 #função simular_mês_população
 def simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos):
-    avisos_simulacao = [] #cria lista vazia para armazenar avisos de todas as pessoas
-    pagamentos_simulacao = [] #cria lista vazia para armazenar pagamentos de todas as pessoas   
+    avisos_simulacao = [] #cria lista vazia para armazenar avisos 
+    pagamentos_simulacao = [] #cria lista vazia para armazenar pagamentos   
     
     for pessoa in pessoas: #itera sobre cada pessoa na lista pessoas
         simular_recebimentos(pessoa, taxa_mensal_rendimento) #chama a função para simular recebimentos
@@ -79,5 +79,6 @@ def simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos):
         
         avisos_simulacao.extend(avisos)  #adiciona os avisos da pessoa à lista geral de avisos
         pagamentos_simulacao.extend(pagamentos)  #adiciona os pagamentos da pessoa à lista geral de pagamentos  
-        
+
     return avisos_simulacao, pagamentos_simulacao #retorna a lista de avisos de todas as pessoas e a simulação de pagamentos
+#--------------------------------------------
