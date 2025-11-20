@@ -59,9 +59,10 @@ def main():
             for p in pagamentos:
                 print(p)
 
-            print(f"{ql}[RELATÓRIO DE AVISOS]{ql}")
-            for a in avisos:
-                print(a)
+            if avisos:
+                print(f"{ql}[RELATÓRIO DE AVISOS]{ql}")
+                for a in avisos:
+                    print(a)
            
 
             print(f"{i}Simulação de um mês concluída para todas as pessoas.{r}{ql}")
