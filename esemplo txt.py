@@ -1,2 +1,3 @@
-with open ('exemple.txt', 'a') as file:
-    file.write('\nAppended text.')
+with open ('exemple.txt', 'r') as file:
+    content = file.read()
+    print(content)
