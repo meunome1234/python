@@ -1,2 +1,2 @@
-with open ('exemple.txt', 'w') as file:
-    file.write('teste 2')
+with open ('exemple.txt', 'a') as file:
+    file.write('\nAppended text.')
