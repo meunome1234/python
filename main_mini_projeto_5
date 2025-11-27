@@ -1,3 +1,6 @@
+#cria texto
+with open("mini_projetro_5.txt", "w") as arquivo:#criar o arquivo
+    arquivo.write("cadastro de pessoas\n")
 
 #--formatação de texto--------
 G = '\033[32m' # green - verde
