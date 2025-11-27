@@ -16,7 +16,7 @@ while not sair:
     elif opcao == 'l':#ler o arquivo e mostrar os nomes ---------------
         with open("desafio.txt", "r") as arquivo:#read
             conteudo = arquivo.read()#cria variavel conteudo e lê o arquivo
-            print (conteudo)
+            print (f"{conteudo} \n")
         input("pressione enter para continuar...")#frear o programa
     elif opcao == 's':#sair do programa--------------------------------
         sair = True
