@@ -4,9 +4,9 @@ r = '\033[0m' # reset
 G = '\033[32m' # green - verde
 ql = "\n" #quebra de linha
 #definição  das funções
-from pessoa_mini_projeto_5 import Pessoa
-from indices_mini_projeto_5 import taxa_mensal_rendimento
-from indices_mini_projeto_5 import gastos   
+from pessoa import Pessoa
+from indices import taxa_mensal_rendimento
+from indices import gastos   
 
 
 def inserir_pessoa(pessoas, nome, salario, patrimonio, conta_corrente):#insere nova pessoa na lista pessoas (main)

@@ -1,3 +1,7 @@
+#importações necessárias
+import csv
+import json
+
 #cria texto
 with open("mini_projetro_5.txt", "w") as arquivo:#criar o arquivo
     arquivo.write("cadastro de pessoas\n")
@@ -10,11 +14,11 @@ i = '\033[3m' # italico
 r = '\033[0m' # reset
 #-------------------------------------------
 #importar funções
-from funcoes_mini_projeto_5 import digitar_dados_pessoa
-from funcoes_mini_projeto_5 import mostrar_dados_pessoas
-from indices_mini_projeto_5 import taxa_mensal_rendimento
-from indices_mini_projeto_5 import gastos
-from funcoes_mini_projeto_5 import simular_mes_populacao
+from funcoes import digitar_dados_pessoa
+from funcoes import mostrar_dados_pessoas
+from indices import taxa_mensal_rendimento
+from indices import gastos
+from funcoes import simular_mes_populacao
 #-------------------------------------------
 
 
