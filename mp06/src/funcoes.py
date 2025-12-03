@@ -8,13 +8,13 @@ from pessoa import Pessoa
 from indices import taxa_mensal_rendimento
 from indices import gastos   
 
-
+#-------------------------------------------- dados )))))
 def inserir_pessoa(pessoas, nome, salario, patrimonio, conta_corrente):#insere nova pessoa na lista pessoas (main)
     nova_pessoa = Pessoa(nome, salario, patrimonio, 0)#cria nova pessoa e conta corrente inicia em 0
     pessoas.append(nova_pessoa)#adiciona nova pessoa à lista pessoas
 
 
-#funções do menu------------------------------------------
+#funções do menu------------------------------------------ interface ))))
 #opção i
 def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida automaticamente no no main ou devvo definir o tipo?
     nome = input("Digite o nome da pessoa: ")
@@ -27,7 +27,7 @@ def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida 
     print(f"{r}{i}Pessoa inserida com sucesso!{r}{ql}")
 
 #opção 
-#usar for para mostrar 
+#usar for para mostrar --------------------------------------------- interface ))))
 def mostrar_dados_pessoas(pessoas):
     for pessoa in pessoas:
         print(f"Nome: {pessoa.nome:<20} {r}Salário:{i}{G} "
@@ -43,7 +43,7 @@ def simular_recebimentos(pessoa, taxa_mensal_rendimento): #puxa objeto pessoa e 
     pessoa.conta_corrente += rendimento + pessoa.salario #atualiza o valor da conta corrente somando o rendimento e o salário
 
 #---------------------------------------------------------------------------------------------
-#função simular gastos
+#função simular gastos --------------------------------------------- simulador )))))
 
 def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
     lista_aviso = [] #cria lista vazia para armazenar avisos
@@ -67,7 +67,7 @@ def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
     return lista_aviso, lista_pagamentos #retorna a lista de avisos e de pagamentos
 
 #----------------------------------------------------------------------------------------
-#função simular_mês_população
+#função simular_mês_população ---------------------------------------------- simulador )))))
 def simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos):
     avisos_simulacao = [] #cria lista vazia para armazenar avisos 
     pagamentos_simulacao = [] #cria lista vazia para armazenar pagamentos   
