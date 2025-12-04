@@ -1,5 +1,5 @@
 # formatação de texto
-from main import G, P, ql, i, r
+from main import G, ql, i, r
 #funções
 from dados import inserir_pessoa
 
@@ -13,7 +13,7 @@ def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida 
     patrimonio = float(input(f"{r}Digite o seu patrimônio:{G} R$ "))
     inserir_pessoa(pessoas, nome, salario, patrimonio, 0) #coleta os dados e passa para a função inserir_pessoa(adicionando pessoa na lista)
     #cria tupla com os dados da pessoa
-
+   
 
     print(f"{r}{i}Pessoa inserida com sucesso!{r}{ql}")
 

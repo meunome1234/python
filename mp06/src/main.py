@@ -6,8 +6,6 @@ import json
 with open("/rsc/pessoas.txt") as arquivo:#abrir o arquivo
     dados_pessoastxt = arquivo.read() #ler o arquivo
     
-    
-
 #--formatação de texto--------
 G = '\033[32m' # green - verde
 P = '\033[1;35m' # purple - roxo 
