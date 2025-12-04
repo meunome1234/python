@@ -2,9 +2,11 @@
 import csv
 import json
 
-#cria texto
-with open("mini_projetro_5.txt", "w") as arquivo:#criar o arquivo
-    arquivo.write("cadastro de pessoas\n")
+#abre txt
+with open("/rsc/pessoas.txt") as arquivo:#abrir o arquivo
+    dados_pessoastxt = arquivo.read() #ler o arquivo
+    
+    
 
 #--formatação de texto--------
 G = '\033[32m' # green - verde
@@ -14,11 +16,11 @@ i = '\033[3m' # italico
 r = '\033[0m' # reset
 #-------------------------------------------
 #importar funções
-from funcoes import digitar_dados_pessoa
-from funcoes import mostrar_dados_pessoas
+from interface import digitar_dados_pessoa
+from interface import mostrar_dados_pessoas
 from indices import taxa_mensal_rendimento
 from indices import gastos
-from funcoes import simular_mes_populacao
+from simulador import simular_mes_populacao
 #-------------------------------------------
 
 
