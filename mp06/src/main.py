@@ -3,15 +3,9 @@ import csv
 import json
 import os
 
-# Ajustando o caminho do arquivo com base no diretório do script//copilot
-caminho_arquivo = "../rsc/pessoas.txt"
+os.system("cls" if os.name == "nt" else "clear")  #limpa a tela do terminal
 
-# Resolve o caminho relativo com base no diretório do script //copilot
-caminho_resolvido = os.path.join(os.path.dirname(__file__), caminho_arquivo)
 
-# Abre o arquivo usando o caminho resolvido //copilot
-with open(caminho_resolvido, encoding="utf-8") as arquivo:  # abrir o arquivo
-    dados_pessoastxt = arquivo.read()  # ler o arquivo
     
 
 #importar funções
@@ -30,7 +24,7 @@ from interface import P, ql, i, r
 #programa principal
 def main():
 
-    pessoas = [] #cria lista vazia para armazenar pessoas
+    #removi a lista pessoas que era usada na memória (usar o txt)
 
     sair = False #variável de controle do while do menu
 
@@ -54,7 +48,7 @@ def main():
 
         elif opcao == "m":
             print(f"[DADOS DAS PESSOAS]")
-            mostrar_dados_pessoas(pessoas)
+            mostrar_dados_pessoas()
             input(f"{ql}pressione enter...")#freiar o while
 
         elif opcao == "i":

@@ -1,5 +1,6 @@
 from indices import taxa_mensal_rendimento
 from indices import gastos
+from interface import ql, r, i 
 
 #sumular recebimentos para atualizar os valores do patrimônio ------- simulador )))))
 def simular_recebimentos(pessoa, taxa_mensal_rendimento): #puxa objeto pessoa e a taxa mensal de rendimento
