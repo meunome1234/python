@@ -1,3 +1,4 @@
+
 #variavel taxa mensal
 taxa_mensal_rendimento = 0.005
 

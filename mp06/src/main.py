@@ -1,24 +1,26 @@
 #importações necessárias
 import csv
 import json
+import os
 
-#abre txt
-with open("../rsc/pessoas.txt") as arquivo:#abrir o arquivo
-    dados_pessoastxt = arquivo.read() #ler o arquivo
+# Ajustando o caminho do arquivo com base no diretório do script//copilot
+caminho_arquivo = "../rsc/pessoas.txt"
+
+# Resolve o caminho relativo com base no diretório do script //copilot
+caminho_resolvido = os.path.join(os.path.dirname(__file__), caminho_arquivo)
+
+# Abre o arquivo usando o caminho resolvido //copilot
+with open(caminho_resolvido, encoding="utf-8") as arquivo:  # abrir o arquivo
+    dados_pessoastxt = arquivo.read()  # ler o arquivo
     
-#--formatação de texto--------
-G = '\033[32m' # green - verde
-P = '\033[1;35m' # purple - roxo 
-ql = "\n" #quebra de linha
-i = '\033[3m' # italico
-r = '\033[0m' # reset
-#-------------------------------------------
+
 #importar funções
 from interface import digitar_dados_pessoa
 from interface import mostrar_dados_pessoas
 from indices import taxa_mensal_rendimento
 from indices import gastos
 from simulador import simular_mes_populacao
+from interface import P, ql, i, r
 #-------------------------------------------
 
 

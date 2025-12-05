@@ -1,5 +1,10 @@
-# formatação de texto
-from main import G, ql, i, r
+#--formatação de texto--------
+G = '\033[32m' # green - verde
+P = '\033[1;35m' # purple - roxo 
+ql = "\n" #quebra de linha
+i = '\033[3m' # italico
+r = '\033[0m' # reset
+#-------------------------------------------
 #funções
 from dados import inserir_pessoa
 
