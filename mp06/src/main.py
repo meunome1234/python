@@ -3,7 +3,7 @@ import csv
 import json
 
 #abre txt
-with open("/rsc/pessoas.txt") as arquivo:#abrir o arquivo
+with open("../rsc/pessoas.txt") as arquivo:#abrir o arquivo
     dados_pessoastxt = arquivo.read() #ler o arquivo
     
 #--formatação de texto--------
