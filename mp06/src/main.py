@@ -1,12 +1,7 @@
-#importações necessárias
-import csv
-import json
+
 import os
 
-os.system("cls" if os.name == "nt" else "clear")  #limpa a tela do terminal
-
-
-    
+os.system("cls" if os.name == "nt" else "clear")  #limpa a tela do terminal   
 
 #importar funções
 from interface import digitar_dados_pessoa
@@ -16,10 +11,6 @@ from indices import gastos
 from simulador import simular_mes_populacao
 from interface import P, ql, i, r
 #-------------------------------------------
-
-
-
-
 
 #programa principal
 def main():
@@ -42,7 +33,7 @@ def main():
 
         if opcao == "d":
             print(f"[INSERIR NOVA PESSOA]{ql}")
-            digitar_dados_pessoa(pessoas)
+            digitar_dados_pessoa()
             input(f"{ql}pressione enter...")#freiar o while
             
 
@@ -54,7 +45,7 @@ def main():
         elif opcao == "i":
             print(f"[SIMULAR MÊS DA POPULAÇÃO]{ql}")
             
-            avisos, pagamentos = simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos) #chama a função para simular o mês da população e captura os avisos 
+            avisos, pagamentos = simular_mes_populacao( taxa_mensal_rendimento, gastos) #chama a função para simular o mês da população e captura os avisos 
         
 
             print(f"{ql}[RELATÓRIO DE PAGAMENTOS]{ql}")

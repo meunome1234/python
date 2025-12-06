@@ -1,3 +1,6 @@
+#importações necessárias
+import csv
+import json
 import os
 
 #--formatação de texto--------
@@ -6,49 +9,40 @@ P = '\033[1;35m' # purple - roxo
 ql = "\n" #quebra de linha
 i = '\033[3m' # italico
 r = '\033[0m' # reset
-
-#-- ler o txt -----------------------------------------
-# Ajustando o caminho do arquivo com base no diretório do script//copilot
-caminho_arquivo = "../rsc/pessoas.txt"
-
-# Resolve o caminho relativo com base no diretório do script //copilot
-caminho_resolvido = os.path.join(os.path.dirname(__file__), caminho_arquivo)
-
-# Abre o arquivo usando o caminho resolvido //copilot
-with open(caminho_resolvido, encoding="utf-8") as arquivo:  # abrir o arquivo
-    dados_pessoastxt = arquivo.read()  # ler o arquivo
-
-
-
-
+#-------------------------------------------
 #funções
 from dados import inserir_pessoa
+from pessoa import Pessoa
 
+
+# Corrigindo o caminho do arquivo para um caminho relativo baseado no diretório do script
+caminho_arquivo = os.path.join(os.path.dirname(__file__), "../rsc/pessoas.txt")
+
+with open(caminho_arquivo, "r", encoding="utf-8") as arquivo: #abre o arquivo para leitura
+    linhas = arquivo.readlines() #lê todas as linhas do arquivo
+    arquivo = [] #cria lista vazia para armazenar os objetos Pessoa
+    for linha in linhas: #itera sobre cada linha do arquivo
+        nome, salario, patrimonio= linha.split(",") 
+        pessoa = Pessoa(nome, float(salario), float(patrimonio), float(conta_corrente)) #cria objeto Pessoa com os dados lidos
+        arquivo.append(pessoa) #adiciona o objeto Pessoa à lista arquivo
 
 
 #funções do menu------------------------------------------ interface ))))
 #opção i
-#def digitar_dados_pessoa(pessoas): #a variável do tipo list já está definida automaticamente no no main ou devvo definir o tipo?
-#    nome = input("Digite o nome da pessoa: ")
-#   salario = float(input(f"{r}Digite o seu salário:{G} R$ "))
-#    patrimonio = float(input(f"{r}Digite o seu patrimônio:{G} R$ "))
-#    inserir_pessoa(pessoas, nome, salario, patrimonio, 0) #coleta os dados e passa para a função inserir_pessoa(adicionando pessoa na lista)
+def digitar_dados_pessoa(): 
+    nome = input("Digite o nome da pessoa: ")
+    salario = float(input(f"{r}Digite o seu salário:{G} R$ "))
+    patrimonio = float(input(f"{r}Digite o seu patrimônio:{G} R$ "))
+    inserir_pessoa(nome, salario, patrimonio, 0) #coleta os dados e passa para a função inserir_pessoa(adicionando pessoa na lista)
     #cria tupla com os dados da pessoa
-def digitar_dados_pessoa():
-    with open(caminho_resolvido, "a", encoding="utf-8") as arquivo:  # abrir o arquivo para adição
-        nome = input("Digite o nome da pessoa: ")
-        salario = float(input(f"{r}Digite o seu salário:{G} R$ "))
-        patrimonio = float(input(f"{r}Digite o seu patrimônio:{G} R$ "))
-        conta_corrente = 0
-        arquivo.write(f"{nome},{salario},{patrimonio},{conta_corrente}\n")  # adiciona a nova pessoa no arquivo   
-
+   
 
     print(f"{r}{i}Pessoa inserida com sucesso!{r}{ql}")
 
 #opção 
 #usar for para mostrar --------------------------------------------- interface ))))
-def mostrar_dados_pessoas(pessoas):
-    for pessoa in pessoas:
+def mostrar_dados_pessoas():
+    for pessoa in arquivo: #itera sobre cada pessoa na lista pessoas
         print(f"Nome: {pessoa.nome:<20} {r}Salário:{i}{G} "
               f"R$ {pessoa.salario:.2f} {r}Patrimônio: R$ {i}{G}"
               f" {pessoa.patrimonio:<10.2f} {r}")    

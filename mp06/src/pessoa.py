@@ -1,7 +1,7 @@
 #cria a classe pessoa com os atributos nome, salario, patrimonio e conta_corrente
 
 class Pessoa:
-    def __init__(self, nome, salario, patrimonio,conta_corrente ):
+    def __init__(self, nome, salario, patrimonio,conta_corrente=0.0): #mexi no conta corrente
         self.nome = nome
         self.salario = salario
         self.patrimonio = patrimonio

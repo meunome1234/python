@@ -1,4 +1,3 @@
-NOME                   ,    PATRIMÔNIO  ,   SALÁRIO
 Carla de Carvalho      ,    20000000    ,   0
 Francisca Costa        ,    20000000    ,   0
 Natália Ferreira       ,    20000000    ,   0
