@@ -10,12 +10,15 @@ from indices import taxa_mensal_rendimento
 from indices import gastos
 from simulador import simular_mes_populacao
 from interface import P, ql, i, r
+from dados import carregar_dados # chamar a função para preencher a lista pessoas antes da seleção do menu
+
 #-------------------------------------------
 
 #programa principal
 def main():
-
-    #removi a lista pessoas que era usada na memória (usar o txt)
+    
+    #pessoas.extend(dados_carregados)# adiciona os dados carregados à lista pessoas
+   
 
     sair = False #variável de controle do while do menu
 
