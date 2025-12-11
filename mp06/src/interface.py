@@ -39,7 +39,7 @@ def mostrar_dados_pessoas():
         return
 
     for pessoa in pessoas: #itera sobre cada pessoa na lista
-        print(f"Nome: {pessoa.nome:<20} {r}Salário:{i}{G} "
+        print(f"Nome: {pessoa.nome:<23} {r}Salário:{i}{G} "#adicionei 3 caracteres para seguir o formato do txt
               f"R$ {pessoa.salario:.2f} {r}Patrimônio: R$ {i}{G}"
               f" {pessoa.patrimonio:<10.2f} {r}")
 

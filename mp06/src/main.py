@@ -1,4 +1,4 @@
-
+#obs inicia com os dados carregados do arquivo txt
 import os
 
 os.system("cls" if os.name == "nt" else "clear")  #limpa a tela do terminal   
@@ -11,6 +11,7 @@ from indices import gastos
 from simulador import simular_mes_populacao
 from interface import P, ql, i, r
 from dados import carregar_dados # chamar a função para preencher a lista pessoas antes da seleção do menu
+from dados import salvar_dados_pessoas # chamar a função para salvar os dados no arquivo txt
 
 #-------------------------------------------
 
@@ -23,10 +24,12 @@ def main():
     sair = False #variável de controle do while do menu
 
 
-    #menu de opções------------------------------------------------------------------------
+    #menu de opções------------menu atualizado------------------------------------------------------------
     while sair == False:
         print(f"[SIMULADOR DE RELAÇÕES DE MERCADO]{ql}escolha uma opção:{ql}- "
-            f"[{P}d{r}]igitar dados de uma nova pessoa{ql}- "
+            f"[{P}c{r}]arregar dados das pessoas{ql}- "  
+            f"s[{P}a{r}]lvar dados das pessoas{ql}- "
+            f"[{P}d{r}]igitar dados de nova pessoa{ql}- "
             f"[{P}m{r}]ostrar dados de nova pessoa{ql}- "
             f"S[{P}i{r}]mular finanças mensais da população{ql}- "
             f"[{P}s{r}]air{ql}")
@@ -34,7 +37,21 @@ def main():
         opcao = input(f"opção: {P}")
         print(r) #reseta a cor após a entrada da opção
 
-        if opcao == "d":
+        if opcao == "c":
+            print(f"[CARREGAR DADOS DAS PESSOAS]{ql}")
+            pessoas = carregar_dados()  #carrega os dados do arquivo txt
+            print(f"{ql}Dados carregados com sucesso!{r}")
+            input(f"{ql}pressione enter...")#freiar o while
+        
+        elif opcao == "a":
+            print(f"[SALVAR DADOS DAS PESSOAS]{ql}")
+            salvar_dados_pessoas(pessoas)  #salva os dados no arquivo txt
+            print(f"{ql}Dados salvos com sucesso!{r}")
+            input(f"{ql}pressione enter...")#freiar o while
+
+
+
+        elif opcao == "d":
             print(f"[INSERIR NOVA PESSOA]{ql}")
             digitar_dados_pessoa()
             input(f"{ql}pressione enter...")#freiar o while

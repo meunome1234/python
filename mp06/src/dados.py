@@ -1,6 +1,6 @@
 from pessoa import Pessoa
 import os
-
+#gambiarra no txt (removi as categorias)
 # Define o caminho do arquivo 
 caminho_arquivo = os.path.join(os.path.dirname(__file__), "../rsc/pessoas.txt")
 
@@ -33,3 +33,11 @@ def inserir_pessoa(nome, salario, patrimonio, conta_corrente):# insere nova pess
     # Escreve APENAS 3 campos (conta corrente inicia em 0 já no pessoas.py)
     with open(caminho_arquivo, "a", encoding="utf-8") as arquivo: 
         arquivo.write(f"{nome},{salario},{patrimonio}\n")
+
+
+def salvar_dados_pessoas(listas_pessoas):# salva a lista de pessoas no arquivo txt
+    
+    with open(caminho_arquivo, "w", encoding="utf-8") as arquivo:# o caminho já foi definido no início do dados.py
+        for pessoa in listas_pessoas:
+            # Escreve APENAS 3 campos (conta corrente inicia em 0 já no pessoas.py)
+            arquivo.write(f"{pessoa.nome},{pessoa.salario},{pessoa.patrimonio}\n")
