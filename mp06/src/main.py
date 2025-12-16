@@ -12,13 +12,13 @@ from simulador import simular_mes_populacao
 from interface import P, ql, i, r
 from dados import carregar_dados # chamar a função para preencher a lista pessoas antes da seleção do menu
 from dados import salvar_dados_pessoas # chamar a função para salvar os dados no arquivo txt
-
+from dados import carregar_dados
 #-------------------------------------------
 
 #programa principal
 def main():
     
-    #pessoas.extend(dados_carregados)# adiciona os dados carregados à lista pessoas
+    pessoas = carregar_dados()  #carrega os dados do arquivo txt ao iniciar o programa
    
 
     sair = False #variável de controle do while do menu
@@ -43,7 +43,7 @@ def main():
             print(f"{ql}Dados carregados com sucesso!{r}")
             input(f"{ql}pressione enter...")#freiar o while
         
-        elif opcao == "a":
+        elif opcao == "a": #atualizar depois da simulação
             print(f"[SALVAR DADOS DAS PESSOAS]{ql}")
             salvar_dados_pessoas(pessoas)  #salva os dados no arquivo txt
             print(f"{ql}Dados salvos com sucesso!{r}")
@@ -65,7 +65,7 @@ def main():
         elif opcao == "i":
             print(f"[SIMULAR MÊS DA POPULAÇÃO]{ql}")
             
-            avisos, pagamentos = simular_mes_populacao( taxa_mensal_rendimento, gastos) #chama a função para simular o mês da população e captura os avisos 
+            avisos, pagamentos = simular_mes_populacao(pessoas, taxa_mensal_rendimento, gastos) #chama a função para simular o mês da população e captura os avisos 
         
 
             print(f"{ql}[RELATÓRIO DE PAGAMENTOS]{ql}")
