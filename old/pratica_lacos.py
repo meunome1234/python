@@ -454,36 +454,9 @@ while prateleira_atual <= 5:
         prateleira_atual += 1
 #6. Laços while aninhados (um while dentro de outro)--------------------------------------
 #Exercício 1: Simulador de dias e horas de jogo V1
-dia = 1
-turno = 1
-while dia <= 3:
-    if dia == 1:
-        print("dia 1")
-        dia += 1
-    elif dia == 2:
-        print("dia 2")
-        dia += 1
-    elif dia == 3:
-        print("dia 3")
-        dia = 1
-
-    while turno <= 4:
-        if turno == 1:
-            print("turno manhã")
-            turno += 1
-        elif turno == 2:
-            print("turno tarde")
-            turno += 1
-        elif turno == 3:
-            print("turno noite")
-            turno += 1
-        else:
-            print ("turno madrugada")
-            turno = 1
 
 import time
 
-# --- Variáveis Iniciais ---
 dia = 1 
 turno = 1
 print_t = ""
@@ -517,3 +490,113 @@ while dia <= 3:  # Limitado a 3 dias para teste
     turno = 1
 
 #Exercício 2: Rondas de manutenção na ciclovia
+import time
+
+
+ronda = 1 
+trecho = 1
+print_t = ""
+
+
+
+while ronda <= 2:  
+    
+    while trecho <= 5:      
+        if trecho == 1:
+            print_t = "trecho 1"
+        elif trecho == 2:
+            print_t = "trecho 2"
+        elif trecho == 3:
+            print_t = "trecho 3"
+        elif trecho == 4:
+            print_t = "trecho 4"     
+        print(f"ronda {ronda} | no {print_t}")      
+        time.sleep(1)      
+        trecho += 1   
+    ronda += 1  
+    trecho = 1
+#Exercício 3: Múltiplas tentativas para acertar o riff
+sessao = 1 
+tentativa = 1
+print_te = ""
+
+while sessao <= 3:
+    
+    while tentativa <= 5:
+        if tentativa == 1:
+            print_te = "primeira tentativa"
+        elif tentativa == 2:
+            print_te = "segunda tentativa"
+        elif tentativa == 3:
+            print_te = "terceira tentativa"
+        elif tentativa == 4:
+            print_te = "quarta tentativa"     
+        elif tentativa == 5:
+            print_te = "quinta tentativa" 
+        print(f"sessão {sessao} | {print_te}")      
+        time.sleep(1)      
+        tentativa += 1
+    sessao += 1  
+    tentativa = 1
+    if sessao > 3:
+        sessao = 1
+#-----------------------------------------------------------------------------------
+#7. Laços for com range
+#-----------------------------------------------------------------------------------
+#Exercício 1: Geração de Elixir
+
+for elixir in range (1, 10):
+    print(f"Nível elixir: {elixir}")
+
+#Exercício 2: Contando as paradas do BRT
+for parada in range(1, 13):
+    print(f"passando pela estação {parada}")
+
+#Exercício 3: Contagem de abertura do show
+for contagem in range(10, 0, -1):
+    print(f"{contagem}...")
+print(" O SHOW COMEÇOU!")
+
+#----------------------------------------------------------------------------------
+#8. Laços for visitando elementos de uma lista
+#-----------------------------------------------------------------------------------
+#Exercício 1: Listando as cartas do deck
+DECK = ["CAVALEIRO", "ARQUEIRAS", "BOLA DE FOGO", "BRUXA", "GOLEM", "REI", "ANÃO", "BARDO" ]
+for carta in DECK:
+    print(f" CARTA DO DECK:{carta}")
+#Exercício 2: Verificando as bicicletas no conserto
+
+bicicletas_para_conseto = ["oggi hds", "ecos onix", "caloi elite", "absolute hera"]
+for bicicleta in bicicletas_para_conseto:
+    print(f"verificando a: {bicicleta}")
+
+#Exercício 3: Minha coleção de discos do Black Sabbath
+colecao_discos = ["Sabbath bloody sabbath", "Paranoid", "Master of Reality"]
+for disco in colecao_discos:
+    print(f"ouvindo o álbum: {disco}")
+#----------------------------------------------------------------------------------
+#9. while: Alterando variáveis externas para usar depois
+#----------------------------------------------------------------------------------
+#Exercício 1: Acumulando Elixir
+
+elixir_acumulado = 0
+tempo_de_vida_coletor = 8
+while tempo_de_vida_coletor > 0:
+    elixir_acumulado += 1
+    tempo_de_vida_coletor -= 1
+print(f"O coletor gerou um total de {elixir_acumulado} de elixir")
+
+#Exercício 2: Juntando Dinheiro para uma Peça de Bicicleta
+dinheiro_guardado = 50
+while dinheiro_guardado < 200:
+    semana = int(input(" o quanto você quer adicionar? R$ "))
+    dinheiro_guardado += semana
+print(f"Parabéns! Você conseguiu juntar R${dinheiro_guardado},já pode comprar a peça")
+
+#Exercício 3: Contagem de Passageiros no Ônibus
+passageiros = 40
+paradas_percorridas= 0
+while paradas_percorridas < 5:# menor que 5, já que o laço começa em 0
+    passageiros -= 3
+    paradas_percorridas += 1
+print(f"Após 5 paradas, restam {passageiros} passageiros no ônibus")
