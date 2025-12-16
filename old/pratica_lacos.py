@@ -481,27 +481,39 @@ while dia <= 3:
             print ("turno madrugada")
             turno = 1
 
-#Exercício 1: Simulador de dias e horas de jogo V2
+import time
+
+# --- Variáveis Iniciais ---
 dia = 1 
 turno = 1
-print_t = None
+print_t = ""
 
-if turno == 1:
-    print_t = "manhã"
-elif turno == 2:
-    print_t = "tarde"
-elif turno == 3:
-    print_t = "noite"
-elif turno == 4:
-    print_t = "madrugada"
+
+#exercício 1; simulador de dias e horas de jogo
+import time
+
+
+dia = 1 
+turno = 1
+print_t = ""
+
+
+
+while dia <= 3:  # Limitado a 3 dias para teste 
+    
+    while turno <= 4:      
+        if turno == 1:
+            print_t = "manhã"
+        elif turno == 2:
+            print_t = "tarde"
+        elif turno == 3:
+            print_t = "noite"
+        elif turno == 4:
+            print_t = "madrugada"     
+        print(f"Dia: {dia} | Turno da {print_t}")      
+        time.sleep(1)      
+        turno += 1   
+    dia += 1  
     turno = 1
 
-
-while True:
-
-    dia += 1
-    while True:
-        print(f"dia: {dia} turno:{print_t}")
-
-#
-
+#Exercício 2: Rondas de manutenção na ciclovia
