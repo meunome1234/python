@@ -20,11 +20,11 @@ def simular_gastos(pessoa, gastos): #puxa objeto pessoa e o dicionário gastos
         if pessoa.conta_corrente >= gasto: #verifica se há saldo suficiente na conta corrente
             pessoa.conta_corrente -= gasto #subtrai o gasto da conta corrente
             lista_pagamentos.append( #adiciona o gasto à lista de pagamentos realizados
-                f"{r}{i}{pessoa.nome} pagou R$ {gasto:.2f} em {setor}.{r}") 
+                f"{pessoa.nome} pagou R$ {gasto:.2f} em {setor}.") 
 
         else:
             lista_aviso.append( #adiciona o setor à lista de avisos se não houver saldo suficiente
-                f"{r}{i}Atenção! {pessoa.nome} não tem saldo suficiente! setor afetado:{setor}.{r}{ql}") #avisa sobre saldo insuficiente    
+                f"Atenção! {pessoa.nome} não tem saldo suficiente! setor afetado:{setor}.") #avisa sobre saldo insuficiente    
     pessoa.patrimonio += pessoa.conta_corrente #atualiza o patrimônio somando o saldo da conta corrente
     pessoa.conta_corrente = 0 #zera a conta corrente após transferir o saldo para o patrimônio
 
