@@ -1,0 +1,165 @@
+Carla de Carvalho      ,20000000.0,4010000.0
+Francisca Costa        ,20000000.0,4010000.0
+Natália Ferreira       ,20000000.0,4010000.0
+Jéssica Souza          ,20000000.0,4010000.0
+Rosa Martins           ,20000000.0,4010000.0
+Adriana Santos         ,200000.0,141102.5
+Débora Barbosa         ,195000.0,135049.875
+Marlene Santana        ,190000.0,128997.25
+Rosa Martins           ,185000.0,122944.625
+Lúcia Bezerra          ,180000.0,116892.0
+Rosa Alves             ,175000.0,110839.375
+Renata Carvalho        ,170000.0,104786.75
+Francisca Lima         ,165000.0,98734.125
+Fernanda de Araujo     ,160000.0,92681.5
+Gabriela Costa         ,155000.0,86628.875
+Cristiane Cardoso      ,100000.0,50350.75
+Sônia Cardoso          ,99000.0,49140.225000000006
+Luana Bezerra          ,98000.0,47929.7
+Beatriz Oliveira       ,97000.0,46719.175
+Fabiana Mendes         ,96000.0,45508.649999999994
+Raimunda da Silva      ,95000.0,44298.125
+Ana Borges             ,94000.0,43087.600000000006
+Ângela Teixeira        ,93000.0,41877.075
+Andréia da Silva       ,92000.0,40666.55
+Camila Gomes           ,91000.0,39456.024999999994
+Aparecida de Carvalho  ,90000.0,38245.5
+Vanessa Barbosa        ,89000.0,37034.975000000006
+Júlia Lima             ,88000.0,35824.45
+Luciana Oliveira       ,87000.0,34613.925
+Francisca Gonçalves    ,86000.0,33403.399999999994
+Cristiane Dias         ,85000.0,32192.875
+Patrícia Teixeira      ,84000.0,30982.350000000006
+Raimunda de Araujo     ,83000.0,29771.824999999997
+Aparecida Vieira       ,82000.0,28561.300000000003
+Cristiane Nascimento   ,81000.0,27350.774999999994
+Daniela Bezerra        ,80000.0,26140.25
+Vera de Almeida        ,79000.0,24929.725000000006
+Ângela Machado         ,78000.0,23719.199999999997
+Lúcia Pereira          ,77000.0,22508.675000000003
+Vera Gonçalves         ,76000.0,21298.149999999994
+Rita Marques           ,10000.0,7055.125
+Ana Vieira             ,9950.0,6994.598749999999
+Andréia Gomes          ,9900.0,6934.0725
+Aline Martins          ,9850.0,6873.546249999999
+Júlia Borges           ,9800.0,6813.02
+Camila de Souza        ,9750.0,6752.49375
+Cristiane Lima         ,9700.0,6691.967500000001
+Larissa dos Santos     ,9650.0,6631.44125
+Maria Bezerra          ,9600.0,6570.915000000001
+Daniela Carvalho       ,9550.0,6510.38875
+Mariana Santana        ,9500.0,6449.862499999999
+Simone Alves           ,9450.0,6389.33625
+Fabiana Soares         ,9400.0,6328.8099999999995
+Vera Pereira           ,9350.0,6268.2837500000005
+Letícia Mendes         ,9300.0,6207.7575
+Camila da Silva        ,9250.0,6147.231250000001
+Renata de Almeida      ,9200.0,6086.705
+Carla Silva            ,9150.0,6026.178749999999
+Luana Rodrigues        ,9100.0,5965.6525
+Luciana Silva          ,9050.0,5905.126249999999
+Gabriela de Souza      ,9000.0,5844.6
+Rosângela Santos       ,8950.0,5784.07375
+Rosa Silva             ,8900.0,5723.547500000001
+Jaqueline de Sousa     ,8850.0,5663.02125
+Patrícia Ramos         ,8800.0,5602.495000000001
+Beatriz Lima           ,8750.0,5541.96875
+Andréia Sousa          ,8700.0,5481.442499999999
+Fernanda Teixeira      ,8650.0,5420.91625
+Ângela Batista         ,8600.0,5360.389999999999
+Bruna Gomes            ,8550.0,5299.86375
+Ângela Batista         ,8500.0,5239.3375
+Natália da Silva       ,8450.0,5178.811250000001
+Renata Silva           ,8400.0,5118.285
+Márcia Araujo          ,8350.0,5057.758750000001
+Natália Alves          ,8300.0,4997.2325
+Rosa Fernandes         ,8250.0,4936.706249999999
+Aparecida dos Santos   ,8200.0,4876.18
+Cláudia Santos         ,8150.0,4815.65375
+Rosângela Bezerra      ,8100.0,4755.1275
+Jaqueline Souza        ,8050.0,4694.60125
+Júlia Lima             ,8000.0,4634.075
+Mariana Martins        ,7950.0,4573.54875
+Letícia de Carvalho    ,7900.0,4513.0225
+Sandra Pereira         ,7850.0,4452.49625
+Simone Moreira         ,7800.0,4391.97
+Luciana Lima           ,7750.0,4331.44375
+Cláudia Nascimento     ,7700.0,4270.9175
+Rita Almeida           ,7650.0,4210.39125
+Maria Oliveira         ,7600.0,4149.865
+Ângela do Nascimento   ,7550.0,4089.33875
+Fernanda Moreira       ,10000.0,3538.21795
+Antônia Costa          ,10000.0,3538.21795
+Cláudia Pereira        ,10000.0,3538.21795
+Fernanda Rocha         ,10000.0,3538.21795
+Aparecida Machado      ,10000.0,3538.21795
+Cristiane Vieira       ,10000.0,3538.21795
+Ângela de Souza        ,10000.0,3538.21795
+Luciana de Lima        ,10000.0,3538.21795
+Luciana Gonçalves      ,10000.0,3538.21795
+Lúcia de Oliveira      ,10000.0,3538.21795
+Lúcia Teixeira         ,10000.0,3538.21795
+Andréia Souza          ,10000.0,3538.21795
+Débora Oliveira        ,10000.0,3538.21795
+Luciana Batista        ,10000.0,3538.21795
+Vanessa de Sousa       ,10000.0,3538.21795
+Patrícia de Oliveira   ,10000.0,3538.21795
+Aline de Sousa         ,10000.0,3538.21795
+Vanessa Almeida        ,10000.0,3538.21795
+Débora Barbosa         ,10000.0,3538.21795
+Letícia Santana        ,10000.0,3538.21795
+Larissa dos Santos     ,10000.0,3538.21795
+Camila Fernandes       ,10000.0,3538.21795
+Sônia Cardoso          ,10000.0,3538.21795
+Eliane do Nascimento   ,10000.0,3538.21795
+Raquel Marques         ,10000.0,3538.21795
+Maria Costa            ,10000.0,3538.21795
+Marlene Gomes          ,10000.0,3538.21795
+Jaqueline Lima         ,10000.0,3538.21795
+Cristiane do Nascimento,10000.0,3538.21795
+Daniela Gonçalves      ,10000.0,3538.21795
+Vanessa Vieira         ,10000.0,3538.21795
+Rosa Rocha             ,10000.0,3538.21795
+Cristiane Araujo       ,10000.0,3538.21795
+Beatriz de Lima        ,10000.0,3538.21795
+Lúcia Martins          ,10000.0,3538.21795
+Francisca Dias         ,10000.0,3538.21795
+Lúcia Sousa            ,10000.0,3538.21795
+Ana de Carvalho        ,10000.0,3538.21795
+Antônia Fernandes      ,10000.0,3538.21795
+Bruna Nascimento       ,10000.0,3538.21795
+Josefa Moreira         ,10000.0,3538.21795
+Amanda de Sousa        ,10000.0,3538.21795
+Bruna da Costa         ,10000.0,3538.21795
+Rosa de Sousa          ,10000.0,3538.21795
+Lúcia Lima             ,10000.0,3538.21795
+Adriana Teixeira       ,10000.0,3538.21795
+Luciana da Silva       ,10000.0,3538.21795
+Patrícia de Almeida    ,10000.0,3538.21795
+Terezinha Carvalho     ,10000.0,3538.21795
+Beatriz Ribeiro        ,10000.0,3538.21795
+Ângela da Costa        ,10000.0,3538.21795
+Francisca Araujo       ,10000.0,3538.21795
+Jaqueline Soares       ,10000.0,3538.21795
+Natália de Oliveira    ,10000.0,3538.21795
+Vanessa Alves          ,10000.0,3538.21795
+Natália Santos         ,10000.0,3538.21795
+Aparecida Nascimento   ,10000.0,3538.21795
+Sandra Gomes           ,10000.0,3538.21795
+Bruna Marques          ,10000.0,3538.21795
+Sônia Pereira          ,10000.0,3538.21795
+Fabiana de Souza       ,10000.0,3538.21795
+Cláudia Costa          ,10000.0,3538.21795
+Sandra de Sousa        ,10000.0,3538.21795
+Cláudia da Silva       ,10000.0,3538.21795
+Raquel Costa           ,10000.0,3538.21795
+Simone de Sousa        ,10000.0,3538.21795
+Débora Rocha           ,10000.0,3538.21795
+Sônia de Almeida       ,10000.0,3538.21795
+Patrícia Souza         ,10000.0,3538.21795
+Francisca de Almeida   ,10000.0,3538.21795
+teste,40372.0,203495.0
+teste 5,500000.0,5600000.0
+teste 7,700000.0,800000.0
+teste sei lá,29274592.0,2048589.0
+qdwow,345908.0,3984.0
